@@ -54,7 +54,7 @@ describe('index.js', function () {
 
     it('logs the name of each driver whose hometown matches the passed-in argument', function () {
       logDriversByHometown(drivers, 'Pittsburgh');
-
+      
       expect(spy.calledWithExactly('Bobby')).to.be.true;
 
       expect(spy.calledWithExactly('Sammy')).to.be.true;
@@ -62,7 +62,7 @@ describe('index.js', function () {
       expect(spy.calledWithExactly('Annette')).to.not.be.true;
     });
   });
-  
+
   describe('driversByRevenue()', function () {
     it('uses the sort() method to return a new array of drivers ordered by revenue (lowest to highest)', function () {
       expect(driversByRevenue(drivers)[0].name).to.eql('Sally');
